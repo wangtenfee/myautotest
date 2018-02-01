@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowCallbackHandler;
 import org.springframework.stereotype.Repository;
-import com.comall.requestautotest.domain.Feature;
+import local.wtf.requestautotest.domain.Feature;
 
 @Repository
 public class FeatureDao {

@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.comall.requestautotest.dao.TestCaseDao;
-import com.comall.requestautotest.domain.TestCase;
-import com.comall.requestautotest.service.TestCaseService;
+import local.wtf.requestautotest.dao.TestCaseDao;
+import local.wtf.requestautotest.domain.TestCase;
+import local.wtf.requestautotest.service.TestCaseService;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 

@@ -6,8 +6,8 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import com.comall.requestautotest.dao.TestsuiteDao;
-import com.comall.requestautotest.domain.Position;
+import local.wtf.requestautotest.dao.TestsuiteDao;
+import local.wtf.requestautotest.domain.Position;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:applicationContext.xml"})

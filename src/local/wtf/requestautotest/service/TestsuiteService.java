@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.comall.requestautotest.dao.TestCaseDao;
-import com.comall.requestautotest.domain.Parameter;
-import com.comall.requestautotest.domain.Testsuite;
+import local.wtf.requestautotest.dao.TestCaseDao;
+import local.wtf.requestautotest.domain.Parameter;
+import local.wtf.requestautotest.domain.Testsuite;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.WebClientOptions;
 

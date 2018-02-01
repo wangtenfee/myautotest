@@ -11,8 +11,8 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.comall.requestautotest.dao.RelatedDao;
-import com.comall.requestautotest.domain.Related;
+import local.wtf.requestautotest.dao.RelatedDao;
+import local.wtf.requestautotest.domain.Related;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:applicationContext.xml"})

@@ -6,9 +6,9 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import com.comall.requestautotest.dao.TestCaseDao;
-import com.comall.requestautotest.domain.Parameter;
-import com.comall.requestautotest.service.TestCaseService;
+import local.wtf.requestautotest.dao.TestCaseDao;
+import local.wtf.requestautotest.domain.Parameter;
+import local.wtf.requestautotest.service.TestCaseService;
 import com.gargoylesoftware.htmlunit.WebClient;
 
 

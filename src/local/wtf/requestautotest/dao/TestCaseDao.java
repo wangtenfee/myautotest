@@ -8,7 +8,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowCallbackHandler;
 import org.springframework.stereotype.Repository;
 
-import com.comall.requestautotest.domain.TestCase;
+import local.wtf.requestautotest.domain.TestCase;
 
 @Repository
 public class TestCaseDao {

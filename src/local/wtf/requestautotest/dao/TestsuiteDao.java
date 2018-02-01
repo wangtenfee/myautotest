@@ -6,7 +6,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.comall.requestautotest.domain.Testsuite;
+import local.wtf.requestautotest.domain.Testsuite;
 
 @Repository
 public class TestsuiteDao {
