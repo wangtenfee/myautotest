@@ -4,11 +4,15 @@ import java.util.List;
 import java.util.Map;
 import com.gargoylesoftware.htmlunit.util.NameValuePair;
 
-
+/**
+ * 
+ * @author wangtengfei3
+ * @since 2016年9月22日 上午 10:47
+ * */
 
 public class StringUtil{
 	
-	//�����ַ���
+
 	public String findStr(String string,String lb,String rb){
 		
 		if (string == null || string.equals("")) {

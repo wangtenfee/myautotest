@@ -9,7 +9,11 @@ import org.springframework.jdbc.core.RowCallbackHandler;
 import org.springframework.stereotype.Repository;
 
 import local.wtf.requestautotest.domain.TestCase;
-
+/**
+ * 
+ * @author wangtengfei3
+ * @since 2016年9月22日 上午 10:47
+ * */
 @Repository
 public class TestCaseDao {
 
@@ -47,6 +51,7 @@ public class TestCaseDao {
 		String sqlStr = "select * from t_testcase t where t.id=?";
 		jdbcTemplate.query(sqlStr, new Object[] {id},
 				new RowCallbackHandler() {
+					@Override
 					public void processRow(ResultSet rs) throws SQLException {
 						testCase.setId(rs.getInt("id"));
 						testCase.setCasename(rs.getString("casename"));
@@ -76,6 +81,7 @@ public class TestCaseDao {
 		String sqlStr = "select * from t_testcase t where t.casename=?";
 		jdbcTemplate.query(sqlStr, new Object[] {casename},
 				new RowCallbackHandler() {
+					@Override
 					public void processRow(ResultSet rs) throws SQLException {
 						testCase.setId(rs.getInt("id"));
 						testCase.setCasename(rs.getString("casename"));

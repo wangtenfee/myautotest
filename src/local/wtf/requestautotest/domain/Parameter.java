@@ -1,6 +1,10 @@
 package local.wtf.requestautotest.domain;
 
-
+/**
+ * 
+ * @author wangtengfei3
+ * @since 2016年9月22日 上午 10:47
+ * */
 public class Parameter {
 	private Position  positon;
 	private String paraName;

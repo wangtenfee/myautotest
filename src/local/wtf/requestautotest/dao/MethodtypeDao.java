@@ -9,7 +9,11 @@ import org.springframework.jdbc.core.RowCallbackHandler;
 import org.springframework.stereotype.Repository;
 
 import local.wtf.requestautotest.domain.Methodtype;
-
+/**
+ * 
+ * @author wangtengfei3
+ * @since 2016年9月22日 上午 10:47
+ * */
 @Repository
 public class MethodtypeDao {
 	
@@ -21,6 +25,7 @@ public class MethodtypeDao {
 		Methodtype methodtype = new Methodtype();
 		String sqlStr = "select * from t_methodtype t where t.id=?";
 		jdbcTemplate.query(sqlStr,new Object[]{id},new RowCallbackHandler(){
+			@Override
 			public void processRow(ResultSet rs) throws SQLException {
 				methodtype.setId(rs.getInt("id"));
 				methodtype.setMethodtype(rs.getString("methodtype"));

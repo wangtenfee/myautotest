@@ -11,6 +11,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 import local.wtf.requestautotest.service.TestsuiteService;
 
+
+/**
+ * 
+ * @author wangtengfei3
+ * @since 2016年9月22日 上午 10:47
+ * */
+
 @Controller
 public class TestSuiteController{
 	

@@ -1,25 +1,51 @@
 package local.wtf.requestautotest.domain;
+/**
+ * 
+ * @author wangtengfei3
+ * @since 2016年9月22日 上午 10:47
+ * */
+public enum Position {
+	
+	/*http headers*/
+	HEADER("0","http headers"),
+	/*http url*/
+	URL("1","http url"),  	
+	/*http body*/
+	BODY("2","http body");
+	
+	/**
+     * 编码
+     */
+    private String code;
+    /**
+     * 描述
+     */
+    private String desc;
 
-public enum Position {HEADER, URL, BODY;
+    Position(String code, String desc) {
+        this.code = code;
+        this.desc = desc;
+    }
 
-//    // ���ù��캯������
-//    HEADER(1), URL(2), BODY(3);
-//
-//    // ����˽�б���
-//    private int nCode;
-//
-//    // ���캯����ö������ֻ��Ϊ˽��
-//    private Position(int _nCode) {
-//
-//        this.nCode = _nCode;
-//
-//    }
-//
-//    @Override
-//    public String toString() {
-//
-//        return String.valueOf(this.nCode);
-//
-//    }
+    public String getCode() {
+        return code;
+    }
 
+    public String getDesc() {
+        return desc;
+    }
+
+    /**
+     * 根据位置码获取位置信息
+     * @param code
+     * @return
+     */
+    public static Position codeOf(String code) {
+        for (Position val : Position.values()) {
+            if (val.code.equals(code)) {
+                return val;
+            }
+        }
+        throw new IllegalArgumentException("PositionEnum.codeOf(" + code + ") not found!");
+    }
 }

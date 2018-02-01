@@ -10,7 +10,11 @@ import local.wtf.requestautotest.dao.TestCaseDao;
 import local.wtf.requestautotest.domain.Parameter;
 import local.wtf.requestautotest.service.TestCaseService;
 import com.gargoylesoftware.htmlunit.WebClient;
-
+/**
+ * 
+ * @author wangtengfei3
+ * @since 2016年9月22日 上午 10:47
+ * */
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:applicationContext.xml"})

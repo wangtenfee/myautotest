@@ -11,7 +11,11 @@ import local.wtf.requestautotest.domain.TestCase;
 import local.wtf.requestautotest.service.TestCaseService;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-
+/**
+ * 
+ * @author wangtengfei3
+ * @since 2016年9月22日 上午 10:47
+ * */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:applicationContext.xml"})
 public class TestsTestcaseDao {

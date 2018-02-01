@@ -9,7 +9,11 @@ import local.wtf.requestautotest.domain.Parameter;
 import local.wtf.requestautotest.domain.Testsuite;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.WebClientOptions;
-
+/**
+ * 
+ * @author wangtengfei3
+ * @since 2016年9月22日 上午 10:47
+ * */
 @Service("testsuiteservice")
 public class TestsuiteService {
 
@@ -37,8 +41,10 @@ public class TestsuiteService {
 		List<String> errlist = new ArrayList<String>();
 		List<Parameter> paralist = new ArrayList<Parameter>();
 		for(String s:cs){			
-			if(!testCaseService.runCase(testCaseDao.geTestCasebyId(Integer.parseInt(s)),webClient,errlist,paralist))
+			if(!testCaseService.runCase(testCaseDao.geTestCasebyId(Integer.parseInt(s)),webClient,errlist,paralist)) {
 				break;
+			}
+			
 		}
 		webClient.close();
 	}

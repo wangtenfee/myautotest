@@ -9,7 +9,11 @@ import org.springframework.jdbc.core.RowCallbackHandler;
 import org.springframework.stereotype.Repository;
 
 import local.wtf.requestautotest.domain.Httptype;
-
+/**
+ * 
+ * @author wangtengfei3
+ * @since 2016年9月22日 上午 10:47
+ * */
 @Repository
 public class HttptypeDao {
 	
@@ -21,6 +25,7 @@ public class HttptypeDao {
 		Httptype httptype = new Httptype();
 		String sqlStr = "select * from t_httptype t where t.id=?";
 		jdbcTemplate.query(sqlStr,new Object[]{id},new RowCallbackHandler(){
+			@Override
 			public void processRow(ResultSet rs) throws SQLException {
 				httptype.setId(rs.getInt("id"));
 				httptype.setHttptype(rs.getString("httptype"));

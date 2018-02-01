@@ -7,7 +7,11 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import local.wtf.requestautotest.domain.Testsuite;
-
+/**
+ * 
+ * @author wangtengfei3
+ * @since 2016年9月22日 上午 10:47
+ * */
 @Repository
 public class TestsuiteDao {
 

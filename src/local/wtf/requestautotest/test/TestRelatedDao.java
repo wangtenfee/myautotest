@@ -13,7 +13,11 @@ import org.junit.Test;
 
 import local.wtf.requestautotest.dao.RelatedDao;
 import local.wtf.requestautotest.domain.Related;
-
+/**
+ * 
+ * @author wangtengfei3
+ * @since 2016年9月22日 上午 10:47
+ * */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:applicationContext.xml"})
 public class TestRelatedDao {
