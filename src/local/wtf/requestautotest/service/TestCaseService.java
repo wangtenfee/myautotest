@@ -45,20 +45,19 @@ public class TestCaseService {
 	private WebClient webClient;
 
 	/**@author wangtengfei
-	 * @function:�����ڳ�����ִ�в�����������������t_testsuite����ʱִ�в����������÷���Ϊ���صķ�����
 	 * @time 20160602
 	 * */
 	public boolean runCase(TestCase testCase,WebClient webClient,List<String> errList,List<Parameter> paramList) {
 		boolean result = false;
-		//��ȡurl���ͣ� ��http����https
+
 		String url = httptypeDao.getHttptypeById(testCase.getHttptypeid()).getHttptype();
-		//��ȡbaseurl���ͣ����ĸ���������
+
 		url = url + baseurlDao.getBaseurlById(testCase.getBaseurlid()).getUrl();
-		//ƴ����ʵ�ʵ�URL
+
 		url = url + testCase.getUrl();
 		String body = testCase.getBody();
 		
-		//Ӧ�ù���ֵ,
+
 		if (paramList != null && paramList.size()>0) {
 			for (Parameter parameter : paramList) {
 				if(parameter.getScaseid()==testCase.getId()){
@@ -78,19 +77,18 @@ public class TestCaseService {
 			}
 		}
 		//WebRequest webRequest = null;
-		//ִ������
+
 		try {
 System.out.println("*********************start excute "+url+"************************");
 			WebRequest webRequest = new WebRequest(new java.net.URL(url));
-			//���÷���
+
 			webRequest.setHttpMethod(HttpMethod.valueOf(methodtypeDao.getMethodtypeById(testCase.getMethodtypeid()).getMethodtype()));
-			//����������
+
 			if (testCase.getBody() != null) {
 System.out.println("************body:"+body+"****************");				
 				webRequest.setRequestBody(body);
 			}
 			
-			//���������ȡ��Ӧ��ͬʱ������Ӧͷ����Ӧ��
 			String response = "";
 			String resHeader = "";
 			String resBody = "";
@@ -106,7 +104,7 @@ System.out.println("************body:"+body+"****************");
 				errList.add("region not supported!!!");
 				return false;
 			}
-			//������Ӧ���ж������Ƿ�ִ�гɹ���
+
 			String expectresult = testCase.getExpectresult();
 			if (expectresult == null) {
 				result = true;
@@ -117,7 +115,6 @@ System.out.println("************body:"+body+"****************");
 			}
 if(!result){System.out.println(response);}			
 //System.out.println(response);
-			//���ҳ������������еĹ����������еĹ���ֵ�������Ϣ����ɶ��󣬷ŵ������б��
 			List<Related> relatedList = new ArrayList<Related>();
 			relatedList = relatedDao.getRlsByPcs(testCase.getId());
 			if (!relatedList.isEmpty()) {
@@ -150,11 +147,11 @@ System.out.println(result);
 	public boolean runCase(TestCase testCase,WebClient webClientPa,List<String> errListPa){
 		
 		boolean result = false;
-		// ��ȡurl���ͣ� ��http����https
+
 		String url = httptypeDao.getHttptypeById(testCase.getHttptypeid()).getHttptype();
-		// ��ȡbaseurl���ͣ����ĸ���������
+
 		url = url + baseurlDao.getBaseurlById(testCase.getBaseurlid()).getUrl();
-		// ƴ����ʵ�ʵ�URL
+
 		url = url + testCase.getUrl();
 		String body = testCase.getBody();
 		webClient = new WebClient();
@@ -177,21 +174,21 @@ System.out.println(result);
 		webClientOptions.setThrowExceptionOnFailingStatusCode(false);
 		webClientOptions.setPrintContentOnFailingStatusCode(false);		
 		WebRequest webRequest = null;
-		//ִ������
+
 		try {
 			webRequest = new WebRequest(new java.net.URL(url));
-			//���÷���
+
 			webRequest.setHttpMethod(HttpMethod.valueOf(methodtypeDao.getMethodtypeById(testCase.getMethodtypeid()).getMethodtype()));
 		} catch (MalformedURLException e1) {
 			errList.add(e1.getMessage());
 			e1.printStackTrace();		
 		}
 		
-		//����������
+
 		if (testCase.getBody() != null) {
 			webRequest.setRequestBody(body);
 		}
-		//���������ȡ��Ӧ��ͬʱ������Ӧͷ����Ӧ��
+
 		String response = null;
 		try {
 			WebResponse webResponse = webClient.getPage(webRequest).getWebResponse();
@@ -224,7 +221,6 @@ System.out.println(result);
 	}
 	
 	/**@author wangtengfei
-	 * @function ���ڴ��������Ӧͷ������Ӧ�������
 	 * */
 	public String[] getParameters(Related related){
 		String[] args=null;

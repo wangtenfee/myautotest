@@ -2,23 +2,21 @@ package local.wtf.requestautotest.domain;
 
 /**
  * @author wangtengfei
- * @�������
        Table: t_related
 Create Table: CREATE TABLE `t_related` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `paraname` varchar(100) NOT NULL COMMENT '������������ֵ',
-  `searchscope` enum('url','body','headers') NOT NULL DEFAULT 'body' COMMENT '��ʾ��������ҹ�����ֵ��ö�����ͣ�����Ϊurl,body,headers',
-  `applyscope` enum('url','body','headers') NOT NULL DEFAULT 'body' COMMENT '��ʾ���ҳ����Ĳ���Ӧ����Ŀ��������ĸ�����ö�����ͣ�����Ϊurl,body,headers',
-  `pcase` int(11) NOT NULL COMMENT '���������Ӧ���ĳЩֵҪ��scase��',
-  `scase` int(11) NOT NULL COMMENT '������Ĳ���Ҫ������pcase�ķ���',
-  `lb` varchar(256) NOT NULL COMMENT '��������߽�ֵ',
-  `rb` varchar(256) NOT NULL COMMENT '�������ұ߽�ֵ',
-  `lbisregex` tinyint(1) DEFAULT '0' COMMENT '0��ʾ�����ı߽粻��������ʽ��1��ʾ��������ʽ��Ĭ��Ϊ0',
-  `rbisregex` tinyint(1) DEFAULT '0' COMMENT '0��ʾ�����ı߽粻��������ʽ��1��ʾ��������ʽ��Ĭ��Ϊ0',
+  `paraname` varchar(100) NOT NULL ,
+  `searchscope` enum('url','body','headers') NOT NULL DEFAULT 'body' ,
+  `applyscope` enum('url','body','headers') NOT NULL DEFAULT 'body' ,
+  `pcase` int(11) NOT NULL ,
+  `scase` int(11) NOT NULL ,
+  `lb` varchar(256) NOT NULL ,
+  `rb` varchar(256) NOT NULL ,
+  `lbisregex` tinyint(1) DEFAULT '0' ,
+  `rbisregex` tinyint(1) DEFAULT '0' ,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='�ñ�洢����֮��
-�Ĺ�ϵͼ'
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 
  * 
  * */
 public class Related {

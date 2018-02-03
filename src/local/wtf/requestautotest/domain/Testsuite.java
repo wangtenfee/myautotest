@@ -1,14 +1,14 @@
 package local.wtf.requestautotest.domain;
 
 /**@author wangtengfei
- * @������� 
+ * 
 *************************** 1. row ***************************
        Table: t_testsuite
 Create Table: CREATE TABLE `t_testsuite` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '����������',
-  `testsuitename` varchar(100) NOT NULL COMMENT '����������',
-  `includetcid` varchar(100) NOT NULL COMMENT '�� �����Լ�������Щ�����������洢��������ID,�м��ö��Ÿ�������Ҫ����������ִ�е�˳��洢',
-  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '����ʱ�䣬Ĭ���Զ�����',
+  `id` int(11) NOT NULL AUTO_INCREMENT 
+  `testsuitename` varchar(100) NOT NULL, 
+  `includetcid` varchar(100) NOT NULL ,
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ,
   PRIMARY KEY (`id`),
   UNIQUE KEY `testsuitename` (`testsuitename`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8

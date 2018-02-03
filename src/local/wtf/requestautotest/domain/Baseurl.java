@@ -2,7 +2,6 @@ package local.wtf.requestautotest.domain;
 
 /**
  * @author wangtengfei
- * @�������
  *        Table: t_baseurl
 Create Table: CREATE TABLE `t_baseurl` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '����������',

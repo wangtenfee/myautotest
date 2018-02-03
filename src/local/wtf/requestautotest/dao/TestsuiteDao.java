@@ -19,9 +19,7 @@ public class TestsuiteDao {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
-	/**@author wangtengfei
-	 * @function ͨ��ID��ȡTestsuite����
-	 * */
+
 	public Testsuite geTestsuitebyId(int id){
 		Testsuite testsuite = null;
 		String sql = "select * from t_testsuite where id=?";

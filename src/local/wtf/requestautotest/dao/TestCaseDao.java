@@ -75,7 +75,7 @@ public class TestCaseDao {
 		return testCase;
 	}
 	
-	//casename��Ψһ�ġ�����ͨ��casename���ҵ�����
+
 	public TestCase geTestCasebyName(String casename){
 		final TestCase testCase = new TestCase();
 		String sqlStr = "select * from t_testcase t where t.casename=?";

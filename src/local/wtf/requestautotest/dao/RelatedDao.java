@@ -25,8 +25,7 @@ public class RelatedDao {
 		return related;
 	}	
 	
-	/**@function:�������� 
-	 * */
+
 	public void insertintoRelated(Related related){
 		String sqlstr = "insert into t_related"
 				+ " (paraname,searchscope,applyscope,pcase,scase,lb,rb)"
@@ -55,9 +54,7 @@ public class RelatedDao {
 		return relateds;
 	}
 	
-	/**
-	 * function: ͨ�� pcase��ȡ���и�����Ϊpcase�Ĺ�ϵ
-	 */
+
 	public List<Related> getRlsByPcs(int pcase){
 		List<Related> relateds = null;
 		String sql = "select * from t_related where pcase = ?";
@@ -66,9 +63,7 @@ public class RelatedDao {
 		return relateds;
 	}
 	
-	/**
-	 * function: ͨ�� scase��ȡ����������Ϊscase�Ĺ�ϵ
-	 */
+
 	public List<Related> getRlsByScs(int scase){
 		List<Related> relateds = null;
 		String sql = "select * from t_related where scase = ?";
@@ -77,9 +72,7 @@ public class RelatedDao {
 		return relateds;
 	}
 	
-	/**
-	 *function: ��ѯ��ϵ����pcase�ļ�¼
-	 **/
+
 	public int getPcaseCount(int pcase){
 		int count = 0;
 		String sql ="select count(id) from t_related where pscase = ?";
@@ -88,9 +81,7 @@ public class RelatedDao {
 		return count;
 	}
 	
-	/**
-	 *function: ��ѯ��ϵ����scase�ļ�¼
-	 **/
+
 	public int getScaseCount(int scase){
 		int count = 0;
 		String sql ="select count(id) from t_related where pscase = ?";
