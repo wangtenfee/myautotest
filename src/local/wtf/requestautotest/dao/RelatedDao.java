@@ -43,9 +43,7 @@ public class RelatedDao {
 		jdbcTemplate.update(sqlstr,args);
 	}
 	
-	/**
-	 * function: ͨ�� pcase and scase��ȡ�������������й�ϵ
-	 */
+
 	public List<Related> getRlsByPcsAndScs(int scase,int pcase){
 		List<Related> relateds = null;
 		String sql = "select * from t_related where pcase = ? and scase = ?";

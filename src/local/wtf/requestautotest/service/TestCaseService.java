@@ -141,7 +141,6 @@ System.out.println(result);
 	}
 	
 	/**@author wangtengfei
-	 * @function:���ڵ���ִ�в�������ʱ�����ڳ����еĲ�һ���ĵط����ڸ÷���û�й�������б�
 	 * @time 20160602
 	 * */	
 	public boolean runCase(TestCase testCase,WebClient webClientPa,List<String> errListPa){
