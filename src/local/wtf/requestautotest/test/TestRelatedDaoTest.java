@@ -20,12 +20,12 @@ import local.wtf.requestautotest.domain.Related;
  * */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:applicationContext.xml"})
-public class TestRelatedDao {
+public class TestRelatedDaoTest {
 	
 	@Autowired
 	private RelatedDao relatedDao;
 	
-	//@Test
+	@Test
 	public void testgetrelatedbyid(){
 		int id=1;
 		assertEquals(id,relatedDao.getRelatedbyId(id).getId());
@@ -43,7 +43,7 @@ public class TestRelatedDao {
 		}
 	}
 	
-	//@Test
+	@Test
 	public void testinsertintoRelated(){
 		Related related  = new Related();
 		//paraname,searchscope,applyscope,pcase,scase,lb,rb

@@ -1,13 +1,14 @@
 package local.wtf.requestautotest.test;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import local.wtf.requestautotest.dao.TestsuiteDao;
-import local.wtf.requestautotest.service.TestsuiteService;
+import local.wtf.requestautotest.dao.MethodtypeDao;
 /**
  * 
  * @author wangtengfei3
@@ -15,16 +16,14 @@ import local.wtf.requestautotest.service.TestsuiteService;
  * */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:applicationContext.xml"})
-public class TestTestSuiteService {
+public class TestMethodtypeDaoTest {
 	
 	@Autowired
-	private TestsuiteService testsuiteService;
-	
-	@Autowired
-	private TestsuiteDao testsuiteDao;
+	private MethodtypeDao methodtypeDao;
 	
 	@Test
-	public void testRunTestsuite(){
-		testsuiteService.runTestsuite(testsuiteDao.geTestsuitebyId(2));
+	public void testgetmethodtpebyid(){
+		int id=1;
+		assertEquals(id,methodtypeDao.getMethodtypeById(id).getId());
 	}
 }

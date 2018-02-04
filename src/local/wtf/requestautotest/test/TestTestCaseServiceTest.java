@@ -18,7 +18,7 @@ import com.gargoylesoftware.htmlunit.WebClient;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:applicationContext.xml"})
-public class TestTestCaseService {
+public class TestTestCaseServiceTest {
 	
 	
 	@Autowired
@@ -48,9 +48,10 @@ public class TestTestCaseService {
 	public void testRunTestcase(){
 		//testCaseService.runCase(testCaseDao.geTestCasebyId(8),null,null);
 		WebClient webClient = new WebClient();
+		
 		List<String> errlist = new ArrayList<String>();
 		List<Parameter> paralist = new ArrayList<Parameter>();
-		testCaseService.runCase(testCaseDao.geTestCasebyId(2),webClient,errlist,paralist);
+		testCaseService.runCase(testCaseDao.geTestCasebyId(1),webClient,errlist,paralist);
 		webClient.close();
 //runCase(TestCase testCase,WebClient webClient,List<String> errList,List<Parameter> paramList) {		
 	}

@@ -48,6 +48,10 @@ Create Table: CREATE TABLE `t_testcase` (
   CONSTRAINT `t_testcase_ibfk_4` FOREIGN KEY (`methodtypeid`) REFERENCES `t_methodtype` (`id`),
   CONSTRAINT `t_testcase_ibfk_5` FOREIGN KEY (`httptypeid`) REFERENCES `t_httptype` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8
+ALTER TABLE `t_testcase`
+	ADD COLUMN `searchscope` VARCHAR(50) NULL COMMENT '查找期望结果的区域,body,header' AFTER `baseurlid`,
+	ADD COLUMN `uniquestring` TEXT NULL COMMENT '确定接口是否成功的唯一值' AFTER `searchscope`;
+	
 --创建测试业务表
 mysql> show create table t_feature \G;
 *************************** 1. row ***************************

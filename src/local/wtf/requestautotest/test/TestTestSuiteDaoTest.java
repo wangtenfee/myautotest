@@ -15,7 +15,7 @@ import local.wtf.requestautotest.domain.Position;
  * */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:applicationContext.xml"})
-public class TestTestSuiteDao {
+public class TestTestSuiteDaoTest {
 
 	@Autowired
 	private TestsuiteDao testsuiteDao;
@@ -25,7 +25,7 @@ public class TestTestSuiteDao {
 		assertEquals("login",testsuiteDao.geTestsuitebyId(1).getTestsuitename());
 	}
 	
-	//@Test
+	@Test
 	public void testPosition(){
 		System.out.println(Position.BODY);
 	}

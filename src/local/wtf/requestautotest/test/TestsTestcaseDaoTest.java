@@ -18,7 +18,7 @@ import org.junit.Test;
  * */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:applicationContext.xml"})
-public class TestsTestcaseDao {
+public class TestsTestcaseDaoTest {
 	
 	@Qualifier("testCaseService")
 	@Autowired
@@ -27,29 +27,24 @@ public class TestsTestcaseDao {
 	@Autowired
 	private TestCaseDao testCaseDao;
 	
-//	@Test
-//	public void testGeTestCasebyId() {
-//		int id=1;
-//		assertEquals(id,testCaseService.findCaseByID(id).getId());
-//	}
-//	
-//	@Test
-//	public void testgetMatchById(){
-//		int id=1;
-//		assertEquals(1, testCaseDao.getMatchById(id));
-//	}
-//	
-//	@Test
-//	public void testgetMatchByName(){
-//		String name = "receivepassport_do";
-//		assertEquals(1, testCaseDao.getMatchByName(name));
-//	}
-//	
-//	@Test
-//	public void testgeTestCasebyName(){
-//		String casename = "receivepassport_do";
-//		assertEquals(casename, testCaseDao.geTestCasebyName(casename).getCasename());
-//	}
+	
+	@Test
+	public void testgetMatchById(){
+		int id=1;
+		assertEquals(1, testCaseDao.getMatchById(id));
+	}
+	
+	@Test
+	public void testgetMatchByName(){
+		String name = "receivepassport_do";
+		assertEquals(1, testCaseDao.getMatchByName(name));
+	}
+	
+	@Test
+	public void testgeTestCasebyName(){
+		String casename = "receivepassport_do";
+		assertEquals(casename, testCaseDao.geTestCasebyName(casename).getCasename());
+	}
 	
 	@Test
 	public void testinsertTestcase(){
